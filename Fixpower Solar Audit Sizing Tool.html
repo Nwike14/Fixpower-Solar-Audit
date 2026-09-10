@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FixPower — Solar Energy Audit & System Sizing</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+  :root{
+    --navy:#012063;
+    --navy-deep:#010F3D;
+    --green:#0BB21C;
+    --green-deep:#099416;
+    --green-tint:#E3F7E4;
+    --bg:#F5F7FB;
+    --card:#FFFFFF;
+    --border:#DCE3F0;
+    --text:#0B1B33;
+    --text-secondary:#5B6B85;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;}
+  h1,h2,.num-font{font-family:'Montserrat',sans-serif;}
+  input:focus{outline:2px solid var(--green);outline-offset:1px;}
+  button:focus-visible{outline:2px solid var(--green);outline-offset:2px;}
+
+  .header{background:var(--navy);}
+  .header-inner{max-width:900px;margin:0 auto;padding:0 28px 38px;}
+  .logo-strip{display:flex;align-items:center;gap:11px;padding:24px 0 6px;}
+  .logo-strip img{height:36px;width:36px;display:block;}
+  .logo-strip span{color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;letter-spacing:.3px;}
+  .eyebrow{color:var(--green);font-size:11.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;margin-top:18px;}
+  .header h1{font-size:clamp(23px,3.6vw,32px);font-weight:700;color:#fff;margin:9px 0 10px;line-height:1.22;}
+  .header p{color:#B9C4E0;font-size:14.5px;max-width:600px;line-height:1.6;margin:0;}
+
+  .wrap{max-width:900px;margin:0 auto;padding:28px 20px 40px;display:flex;flex-direction:column;gap:18px;}
+
+  .card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:24px;box-shadow:0 4px 16px rgba(1,32,99,0.06);}
+  .card h2{font-size:16.5px;font-weight:700;margin:0;color:var(--navy);}
+  .muted{color:var(--text-secondary);}
+  .small{font-size:12.5px;line-height:1.55;}
+
+  .step-row{display:flex;align-items:center;gap:11px;margin-bottom:4px;}
+  .step-badge{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:var(--green);color:var(--navy);font-family:'Montserrat',sans-serif;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;}
+
+  /* Appliance library */
+  .lib-tabs{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 16px;border-bottom:1px solid var(--border);padding-bottom:14px;}
+  .lib-tab{border:1px solid var(--border);background:#fff;color:var(--text-secondary);font-size:12.5px;font-weight:600;padding:7px 13px;border-radius:999px;cursor:pointer;white-space:nowrap;font-family:'Inter',sans-serif;}
+  .lib-tab.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+  .lib-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px;}
+  @media (max-width:560px){.lib-grid{grid-template-columns:1fr;}}
+  .lib-item{display:flex;justify-content:space-between;align-items:center;border:1px solid var(--border);border-radius:9px;padding:11px 14px;background:#FBFCFE;cursor:pointer;transition:border-color .15s ease, background .15s ease;}
+  .lib-item:hover{border-color:var(--green);background:var(--green-tint);}
+  .lib-item .name{font-size:13.5px;font-weight:600;color:var(--navy);}
+  .lib-item .watts{font-size:11.5px;color:var(--text-secondary);margin-top:2px;}
+  .lib-item .plus{font-size:18px;color:var(--text-secondary);font-weight:400;line-height:1;flex-shrink:0;margin-left:10px;}
+  .lib-item:hover .plus{color:var(--green-deep);}
+  .lib-source{font-size:11px;color:var(--text-secondary);margin:-6px 0 16px;line-height:1.5;}
+
+  .profile-row{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 18px;}
+  .profile-chip{border:1.5px solid var(--green);background:var(--green-tint);color:var(--navy);font-size:12.5px;font-weight:700;padding:8px 14px;border-radius:999px;cursor:pointer;font-family:'Inter',sans-serif;}
+  .profile-chip:hover{background:var(--green);border-color:var(--green-deep);color:#fff;}
+
+  .search-wrap{position:relative;margin-top:14px;}
+  .search-input{width:100%;padding:10px 14px;border-radius:8px;border:1px solid var(--border);font-family:'Inter',sans-serif;font-size:13.5px;background:#FBFCFE;color:var(--text);}
+  .search-input::placeholder{color:#AEB9CC;}
+  .search-input:focus{border-color:var(--green);}
+  .no-match{font-size:12.5px;color:var(--text-secondary);padding:14px 4px;text-align:center;}
+
+  .sticky-summary{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid var(--border);border-top:3px solid var(--green);box-shadow:0 4px 14px rgba(1,32,99,0.07);}
+  .sticky-summary-inner{max-width:900px;margin:0 auto;padding:10px 20px;display:flex;gap:22px;flex-wrap:wrap;justify-content:space-between;}
+  .sticky-stat{display:flex;flex-direction:column;}
+  .sticky-stat .lbl{font-size:10px;color:var(--text-secondary);font-weight:600;text-transform:uppercase;letter-spacing:.4px;}
+  .sticky-stat .val{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;color:var(--navy);}
+
+  .savings-block{margin-top:18px;padding-top:16px;border-top:1px solid var(--border);}
+  .savings-result{margin-top:12px;font-size:13px;color:var(--navy);line-height:1.6;background:var(--green-tint);border-radius:9px;padding:12px 14px;font-weight:600;}
+  .savings-result b{font-family:'Montserrat',sans-serif;}
+
+  #printBtn{background:transparent;color:var(--navy);border:1.5px solid var(--navy);padding:11px 24px;border-radius:999px;font-size:13.5px;font-weight:700;cursor:pointer;font-family:'Montserrat',sans-serif;margin-top:10px;}
+  #printBtn:hover{background:var(--navy);color:#fff;}
+
+  @media print{
+    .sticky-summary, .lib-tabs, .search-wrap, .profile-row, .lib-source,
+    .add-row-btn, .clear-btn, #methodToggle, #methodBody, #advancedToggle, #advancedBody,
+    .rec-reset, #submitBtn, #printBtn, .toast, .del-btn, #emptyHint,
+    table.audit th:last-child, table.audit td:last-child { display:none !important; }
+    body{background:#fff;}
+    .header{border:none;}
+    .card{box-shadow:none;border:1px solid #ccc;break-inside:avoid;}
+    .wrap{margin-top:0;}
+    .rec-input{border-color:#ccc;}
+  }
+
+  .empty-hint{font-size:12.5px;color:var(--text-secondary);background:#FBFCFE;border:1px dashed var(--border);border-radius:9px;padding:12px 14px;margin-top:10px;}
+
+  table.audit{width:100%;border-collapse:collapse;}
+  table.audit th{text-align:left;font-size:11px;color:var(--text-secondary);font-weight:600;padding:0 8px 8px;border-bottom:1px solid var(--border);}
+  table.audit td{padding:6px 8px;border-bottom:1px solid #EEF1F7;vertical-align:middle;}
+  .cell-input{width:100%;border:1px solid transparent;background:transparent;font-family:'Inter',sans-serif;font-size:13.5px;font-weight:500;color:var(--text);padding:5px 6px;border-radius:6px;}
+  .cell-input::placeholder{color:#B7C0D1;}
+  .cell-input:hover,.cell-input:focus{border-color:var(--border);background:#FBFCFE;}
+  .num{text-align:right;}
+  .row-total{font-weight:700;color:var(--navy);font-family:'Montserrat',sans-serif;}
+  .del-btn{border:none;background:transparent;cursor:pointer;color:#C4CBDA;padding:4px;font-size:15px;line-height:1;}
+  .del-btn:hover{color:#c0392b;}
+
+  .add-row-btn{margin-top:12px;display:inline-flex;align-items:center;gap:6px;border:1px dashed var(--border);background:transparent;color:var(--text-secondary);font-size:12.5px;font-weight:600;padding:8px 12px;border-radius:8px;cursor:pointer;font-family:'Inter',sans-serif;}
+  .add-row-btn:hover{border-color:var(--green);color:var(--green-deep);}
+  .clear-btn:hover{border-color:#c0392b;color:#c0392b;}
+
+  .totals{margin-top:20px;padding-top:16px;border-top:1px solid var(--border);display:flex;gap:24px;flex-wrap:wrap;}
+  .totals .label{font-size:11.5px;color:var(--text-secondary);font-weight:600;}
+  .totals .value{font-size:21px;font-weight:700;color:var(--navy);font-family:'Montserrat',sans-serif;}
+
+  .chart-wrap{margin-top:22px;}
+  .chart-title{font-size:11.5px;color:var(--text-secondary);font-weight:600;margin-bottom:8px;}
+  .bar-row{display:grid;grid-template-columns:130px 1fr 60px;align-items:center;gap:8px;margin-bottom:6px;}
+  .bar-name{font-size:11.5px;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .bar-track{background:#EEF1F7;border-radius:4px;height:14px;overflow:hidden;}
+  .bar-fill{background:var(--green);height:100%;border-radius:4px;}
+  .bar-val{font-size:11px;color:var(--text-secondary);text-align:right;}
+
+  .field{margin-bottom:16px;}
+  .field label{font-size:13px;color:var(--text);font-weight:600;display:block;margin-bottom:6px;}
+  .field .hint{font-size:11.5px;color:var(--text-secondary);margin-top:4px;line-height:1.45;}
+  .num-input-wrap{position:relative;}
+  .num-input{width:100%;padding:9px 12px;border-radius:8px;border:1px solid var(--border);font-family:'Montserrat',sans-serif;font-size:14.5px;font-weight:600;color:var(--navy);background:#FBFCFE;}
+  .num-input::placeholder{color:#AEB9CC;font-weight:500;}
+  .num-input.has-suffix{padding-right:44px;}
+  .suffix{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:12px;color:var(--text-secondary);font-weight:600;}
+
+  .seg{display:flex;border-radius:8px;overflow:hidden;border:1px solid var(--border);}
+  .seg button{flex:1;padding:9px 8px;font-size:12.5px;font-weight:600;border:none;cursor:pointer;background:#FBFCFE;color:var(--text-secondary);font-family:'Inter',sans-serif;}
+  .seg button.active{background:var(--navy);color:#fff;}
+
+  .field-pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .field-pair .field{margin-bottom:16px;}
+  @media (max-width:560px){.field-pair{grid-template-columns:1fr;}}
+
+  .string-note{margin-top:16px;padding-top:14px;border-top:1px solid var(--border);font-size:11.5px;color:var(--text-secondary);line-height:1.55;}
+  .string-result{margin-top:14px;}
+  .string-result-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:7px 0;}
+  .string-result-row .label{font-size:12px;color:var(--text-secondary);}
+  .string-result-row .value{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:var(--navy);white-space:nowrap;}
+  .string-result-row.highlight .value{color:var(--green-deep);}
+  .string-result-row.highlight{background:var(--green-tint);margin:0 -8px;padding:9px 8px;border-radius:8px;}
+
+  /* Recommended system (editable) */
+  .empty-rec{font-size:13px;color:var(--text-secondary);background:#FBFCFE;border:1px dashed var(--border);border-radius:9px;padding:16px;text-align:center;margin-top:14px;}
+  .rec-grid{display:flex;flex-direction:column;gap:14px;margin-top:16px;}
+  .rec-tile{background:#FBFCFE;border:1px solid var(--border);border-top:3px solid var(--navy);border-radius:11px;padding:18px;width:100%;display:flex;flex-direction:column;gap:5px;}
+  .rec-label{font-weight:700;color:var(--navy);font-family:'Montserrat',sans-serif;font-size:13.5px;}
+  .rec-edit-row{display:flex;align-items:center;gap:8px;margin-top:8px;}
+  .rec-input{flex:1;min-width:0;font-family:'Montserrat',sans-serif;font-size:21px;font-weight:700;color:var(--navy);border:1.5px solid var(--border);border-radius:8px;padding:8px 10px;background:#fff;}
+  .rec-input:focus{border-color:var(--green);}
+  .rec-unit{font-size:12.5px;font-weight:600;color:var(--text-secondary);}
+  .rec-edit-label{font-size:10.5px;color:var(--green-deep);font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-top:2px;}
+  .rec-delta{font-size:11.5px;font-weight:600;min-height:14px;margin-top:2px;}
+  .rec-delta.up{color:var(--green-deep);}
+  .rec-delta.down{color:#C97A22;}
+  .rec-delta.same{color:var(--text-secondary);font-weight:500;}
+  .rec-calc{font-size:11.5px;color:var(--text-secondary);margin-top:6px;line-height:1.5;}
+  .rec-calc b{color:var(--navy);font-weight:700;}
+  .rec-reset{align-self:flex-start;background:none;border:none;color:var(--text-secondary);text-decoration:underline;font-size:11px;cursor:pointer;padding:0;margin-top:8px;font-family:'Inter',sans-serif;}
+  .rec-reset:hover{color:var(--navy);}
+  .daily-demand-strip{margin-top:16px;padding-top:14px;border-top:1px solid var(--border);font-size:13px;color:var(--navy);font-weight:600;font-family:'Montserrat',sans-serif;}
+  .daily-demand-strip .muted{font-weight:500;font-size:12px;font-family:'Inter',sans-serif;}
+
+  .method-toggle{width:100%;display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:transparent;border:none;cursor:pointer;text-align:left;font-size:13.5px;font-weight:700;color:var(--navy);font-family:'Montserrat',sans-serif;}
+  .method-body{padding:0 18px 18px;font-size:12.5px;color:var(--text-secondary);line-height:1.7;display:none;font-family:'Inter',sans-serif;}
+  .method-body.open{display:block;}
+  .method-body code{display:block;font-family:'SFMono-Regular',Consolas,monospace;font-size:11.5px;background:#F7F9FC;padding:8px 10px;border-radius:6px;margin:6px 0 12px;color:var(--navy);}
+  .method-body h4{margin:0 0 4px;color:var(--navy);font-size:12.5px;font-family:'Montserrat',sans-serif;}
+
+  .footnote{font-size:11.5px;color:var(--text-secondary);text-align:center;line-height:1.6;}
+
+  .toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(12px);background:var(--navy);color:#fff;padding:10px 18px;border-radius:999px;font-size:12.5px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .2s ease, transform .2s ease;box-shadow:0 8px 20px rgba(1,32,99,0.25);z-index:50;}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="header-inner">
+    <div class="logo-strip">
+      <img src="data:image/png;base64,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" alt="FixPower">
+      <span>FixPower</span>
+    </div>
+    <div class="eyebrow">Free solar assessment</div>
+    <h1>See exactly what solar system you need</h1>
+    <p>Tell us what you'd like to power, and we'll work out the solar array, battery and inverter your home or business needs to run it — no technical knowledge required.</p>
+  </div>
+</div>
+
+<div class="sticky-summary" id="stickySummary">
+  <div class="sticky-summary-inner">
+    <div class="sticky-stat"><span class="lbl">Daily use</span><span class="val" id="sumDemand">0 kWh</span></div>
+    <div class="sticky-stat"><span class="lbl">Array</span><span class="val" id="sumArray">0 kWp</span></div>
+    <div class="sticky-stat"><span class="lbl">Battery</span><span class="val" id="sumBattery">0 kWh</span></div>
+    <div class="sticky-stat"><span class="lbl">Inverter</span><span class="val" id="sumInverter">0 kVA</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="card">
+    <div class="step-row"><span class="step-badge">1</span><h2>A few details about you</h2></div>
+    <p class="small muted" style="margin:6px 0 14px;">So we can prepare your recommendation and follow up with you directly.</p>
+    <div class="field-pair">
+      <div class="field">
+        <label>Full name</label>
+        <input type="text" id="clientName" class="cell-input" placeholder="e.g. Adaeze Ifediba" style="border:1px solid var(--border);background:#FBFCFE;padding:9px 12px;">
+      </div>
+      <div class="field">
+        <label>Phone number</label>
+        <input type="text" id="clientPhone" class="cell-input" placeholder="e.g. 0803 000 0000" style="border:1px solid var(--border);background:#FBFCFE;padding:9px 12px;">
+      </div>
+    </div>
+    <div class="field-pair">
+      <div class="field" style="margin-bottom:0;">
+        <label>Email address</label>
+        <input type="email" id="clientEmail" class="cell-input" placeholder="e.g. you@email.com" style="border:1px solid var(--border);background:#FBFCFE;padding:9px 12px;">
+      </div>
+      <div class="field" style="margin-bottom:0;">
+        <label>Site address</label>
+        <input type="text" id="siteAddress" class="cell-input" placeholder="Where the system will be installed" style="border:1px solid var(--border);background:#FBFCFE;padding:9px 12px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="step-row"><span class="step-badge">2</span><h2>What do you need power for?</h2></div>
+    <p class="small muted" style="margin-top:6px;">Pick the closest match below to start, or search and add items one by one.</p>
+
+    <div class="profile-row" id="profileRow"></div>
+
+    <div class="search-wrap">
+      <input type="text" id="applianceSearch" class="search-input" placeholder="Search appliances, e.g. fridge, TV, fan...">
+    </div>
+
+    <div class="lib-tabs" id="libTabs"></div>
+    <div class="lib-grid" id="libGrid"></div>
+    <div class="lib-source">Typical wattage per item — adjust any figure below to match what you actually own.</div>
+
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:6px;">
+      <h2 style="font-size:15px;">Your list</h2>
+      <span id="itemCount" class="small muted"></span>
+    </div>
+
+    <div style="overflow-x:auto;margin-top:10px;">
+      <table class="audit">
+        <thead>
+          <tr>
+            <th style="min-width:150px;">Appliance</th>
+            <th class="num">Watts</th>
+            <th class="num">Qty</th>
+            <th class="num">Hrs/day</th>
+            <th class="num">Wh/day</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="applianceBody"></tbody>
+      </table>
+      <div class="empty-hint" id="emptyHint">Your list is empty — tap an item above to add it, or use "Add an item" below to type your own.</div>
+    </div>
+
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <button class="add-row-btn" id="addBlankRow">+ Add an item</button>
+      <button class="add-row-btn clear-btn" id="clearList" type="button">Clear list</button>
+    </div>
+
+    <div class="totals">
+      <div>
+        <div class="label">Daily energy use</div>
+        <div class="value" id="totalDemand">0 kWh</div>
+      </div>
+      <div>
+        <div class="label">Connected load (all on)</div>
+        <div class="value" id="totalPeak">0 W</div>
+      </div>
+    </div>
+
+    <div class="chart-wrap" id="chartWrap">
+      <div class="chart-title">Energy use by item (Wh/day)</div>
+      <div id="chartBody"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="step-row"><span class="step-badge">3</span><h2>Choose your battery</h2></div>
+    <p class="small muted" style="margin:6px 0 16px;">This is the one choice that's really up to you — the settings behind "Adjust assumptions" below are already set to sensible defaults.</p>
+
+    <div class="field" style="margin-bottom:0;">
+      <label>Battery type</label>
+      <div class="seg" id="batteryTypeSeg">
+        <button data-val="lithium">Lithium (recommended)</button>
+        <button data-val="leadAcid">Lead-acid</button>
+      </div>
+      <div class="hint" id="dodHint"></div>
+    </div>
+  </div>
+
+  <div class="card" style="padding:0;">
+    <button class="method-toggle" id="advancedToggle">
+      <span>Adjust assumptions (optional)</span>
+      <span id="advancedChevron">&#9662;</span>
+    </button>
+    <div class="method-body" id="advancedBody">
+      <p style="margin:0 0 14px;">These fine-tune your recommendation. We've already set sensible defaults, so there's no need to change anything here unless you know a figure specific to your site.</p>
+
+      <div class="field">
+        <label>Peak sun hours / day</label>
+        <div class="num-input-wrap">
+          <input type="number" step="0.1" min="0" id="sunHours" class="num-input has-suffix" placeholder="e.g. 5.5">
+          <span class="suffix">hrs</span>
+        </div>
+        <div class="hint">Typical range across Nigeria is roughly 4–6.5 hours depending on region and season.</div>
+      </div>
+
+      <div class="field">
+        <label>System design margin</label>
+        <div class="num-input-wrap">
+          <input type="number" step="0.05" min="1" id="lossFactor" class="num-input has-suffix">
+          <span class="suffix">&times;</span>
+        </div>
+        <div class="hint">Covers inverter, wiring and battery losses.</div>
+      </div>
+
+      <div class="field">
+        <label>Battery autonomy</label>
+        <div class="num-input-wrap">
+          <input type="number" step="0.5" min="0" id="autonomyDays" class="num-input has-suffix">
+          <span class="suffix">days</span>
+        </div>
+        <div class="hint">How many full days the battery should cover with no sun at all.</div>
+      </div>
+
+      <div class="field">
+        <label>Battery bank voltage</label>
+        <div class="seg" id="batteryVoltSeg">
+          <button data-val="12">12V</button>
+          <button data-val="24">24V</button>
+          <button data-val="48">48V</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Solar panel wattage</label>
+        <div class="num-input-wrap">
+          <input type="number" step="5" min="0" id="panelWattage" class="num-input has-suffix" placeholder="e.g. 550">
+          <span class="suffix">Wp</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Load diversity factor</label>
+        <div class="num-input-wrap">
+          <input type="number" step="0.05" min="0.1" id="diversityFactor" class="num-input has-suffix" placeholder="e.g. 0.7">
+          <span class="suffix">&times;</span>
+        </div>
+        <div class="hint">Share of your appliances realistically running at the same time.</div>
+      </div>
+
+      <div class="field" style="margin-bottom:0;">
+        <label>Inverter surge allowance</label>
+        <div class="num-input-wrap">
+          <input type="number" step="0.05" min="1" id="surgeFactor" class="num-input has-suffix" placeholder="e.g. 1.25">
+          <span class="suffix">&times;</span>
+        </div>
+        <div class="hint">Headroom for motor start-up loads such as pumps, compressors and air conditioners.</div>
+      </div>
+
+      <div class="field" style="margin-bottom:0;margin-top:16px;">
+        <label>Inverter future growth margin</label>
+        <div class="num-input-wrap">
+          <input type="number" step="0.05" min="1" id="inverterGrowth" class="num-input has-suffix">
+          <span class="suffix">&times;</span>
+        </div>
+        <div class="hint">Extra headroom for future loads and expansion — 1.10–1.20 is typical, rather than a flat kVA add-on, so it scales sensibly with system size.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="step-row"><span class="step-badge">4</span><h2>Your recommended solar system</h2></div>
+    <p class="small muted" style="margin:6px 0 0;" id="recIntro">Based on everything above, here's what we recommend. Feel free to adjust any figure if you'd like a bigger system.</p>
+
+    <div class="empty-rec" id="emptyRec">Add at least one item in step 2 to see your recommendation here.</div>
+
+    <div id="recContent" style="display:none;">
+      <div class="rec-grid">
+        <div class="rec-tile">
+          <div class="rec-label">Solar array</div>
+          <div class="rec-edit-label">Recommended for you</div>
+          <div class="rec-edit-row">
+            <input type="number" step="0.1" id="finalArrayKWp" class="rec-input">
+            <span class="rec-unit">kWp</span>
+          </div>
+          <div class="rec-delta" id="arrayDelta"></div>
+          <div class="rec-calc">Calculated: <b><span id="arrayKWp">0</span> kWp</b> <span id="arrayNote"></span></div>
+          <button class="rec-reset" id="resetArray" type="button">Reset to calculated</button>
+        </div>
+
+        <div class="rec-tile">
+          <div class="rec-label">Battery bank</div>
+          <div class="rec-edit-label">Recommended for you</div>
+          <div class="rec-edit-row">
+            <input type="number" step="0.1" id="finalBankKWh" class="rec-input">
+            <span class="rec-unit">kWh</span>
+          </div>
+          <div class="rec-delta" id="bankDelta"></div>
+          <div class="rec-calc">Calculated: <b><span id="bankKWh">0</span> kWh</b> <span id="bankNote"></span></div>
+          <button class="rec-reset" id="resetBank" type="button">Reset to calculated</button>
+        </div>
+
+        <div class="rec-tile">
+          <div class="rec-label">Inverter</div>
+          <div class="rec-edit-label">Recommended for you</div>
+          <div class="rec-edit-row">
+            <input type="number" step="0.5" id="finalInverterKVA" class="rec-input">
+            <span class="rec-unit">kVA</span>
+          </div>
+          <div class="rec-delta" id="inverterDelta"></div>
+          <div class="rec-calc">Calculated: <b><span id="inverterKVA">0</span> kVA</b> <span id="inverterNote"></span></div>
+          <button class="rec-reset" id="resetInverter" type="button">Reset to calculated</button>
+        </div>
+      </div>
+
+      <div class="daily-demand-strip">
+        Daily energy use: <span id="dailyDemandTile">0</span> kWh/day <span class="muted" id="demandNote"></span>
+      </div>
+
+      <div class="string-result" id="pvStringBlock">
+        <div class="string-result-row">
+          <span class="label">Panels needed</span>
+          <span class="value" id="installedPanels">0</span>
+        </div>
+        <div class="string-result-row">
+          <span class="label">Wired as</span>
+          <span class="value" id="stringsCount">0 string(s)</span>
+        </div>
+        <div class="string-result-row highlight">
+          <span class="label">Array voltage into inverter (Vmp)</span>
+          <span class="value" id="stringVmp">0 V</span>
+        </div>
+        <div class="string-result-row highlight">
+          <span class="label">Array current into inverter (Imp)</span>
+          <span class="value" id="arrayImp">0 A</span>
+        </div>
+      </div>
+      <div class="string-note">Panel wiring layout is predicted automatically from your recommended array size — our installer will confirm the exact configuration against the panel and inverter models selected.</div>
+
+      <div class="savings-block">
+        <h2 style="font-size:14.5px;">See your potential savings</h2>
+        <p class="small muted" style="margin:6px 0 12px;">What do you currently spend on generator fuel in a typical week?</p>
+        <div class="num-input-wrap" style="max-width:260px;">
+          <input type="number" step="500" min="0" id="fuelSpendWeekly" class="num-input has-suffix" placeholder="e.g. 15000">
+          <span class="suffix">₦/wk</span>
+        </div>
+        <div class="savings-result" id="savingsResult" style="display:none;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="padding:0;">
+    <button class="method-toggle" id="methodToggle">
+      <span>How we work this out</span>
+      <span id="methodChevron">▾</span>
+    </button>
+    <div class="method-body" id="methodBody">
+      <p style="margin:0 0 10px;">This tool applies standard off-grid/hybrid solar sizing arithmetic. It doesn't pull live data or pricing — every figure comes only from what's entered above, so a FixPower engineer will confirm the final specification before installation.</p>
+      <h4>Array size</h4>
+      <code>kWp = (daily kWh use × design margin) ÷ peak sun hours</code>
+      <h4>Battery bank</h4>
+      <code>usable kWh = daily kWh × autonomy days
+bank kWh = usable kWh ÷ depth of discharge
+bank Ah = (bank kWh × 1000) ÷ bus voltage</code>
+      <h4>Inverter</h4>
+      <code>inverter design peak = connected load × max(diversity factor, 0.8)
+inverter kVA = inverter design peak × surge allowance × future growth margin, rounded up to nearest standard size</code>
+      <p style="margin:8px 0 0;">The battery and energy figures use your actual diversity factor. The inverter itself uses a minimum of 0.8 even if your diversity factor is lower, plus a future growth margin (default 15%) — a percentage scales sensibly across small and large systems, rather than adding the same flat kVA to every job.</p>
+      <h4>Predicted panel wiring</h4>
+      <code>panel Vmp/Voc assumed as typical values for the wattage class entered
+panels per string chosen automatically to stay within a safe inverter input voltage
+strings (parallel) = panel count ÷ panels per string, rounded up</code>
+      <p style="margin:8px 0 0;">This is a prediction based on typical panel electrical characteristics for the wattage entered — the exact figures depend on the specific panel and inverter models chosen, which our installer will confirm.</p>
+      <h4>Recommended system (editable)</h4>
+      <p style="margin:8px 0 0;">The array, battery and inverter figures above start out equal to the calculated values, but can be typed over freely — useful for rounding up to a stocked product size, or deliberately choosing a bigger system. The calculated baseline is always shown underneath so nothing is lost.</p>
+    </div>
+  </div>
+
+  <p class="footnote">Estimates for guidance only — a qualified FixPower engineer will confirm the final specification before installation, particularly for sites with motor-driven or safety-critical loads.</p>
+
+  <div class="card" id="submitCard" style="text-align:center;">
+    <h2 style="margin-bottom:6px;">Get your personalised quote</h2>
+    <p class="small muted" style="margin:0 auto 16px;max-width:480px;">Send us what you've entered and we'll follow up with your quote. Nothing is shared anywhere else.</p>
+    <button id="submitBtn" style="background:var(--green);color:var(--navy);border:none;padding:13px 30px;border-radius:999px;font-size:14px;font-weight:800;cursor:pointer;font-family:'Montserrat',sans-serif;">
+      Request my quote
+    </button>
+    <div id="submitStatus" class="small" style="margin-top:12px;min-height:18px;"></div>
+    <div>
+      <button id="printBtn" type="button">Print / Save as PDF</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script>
+(function(){
+  var STANDARD_INVERTER_SIZES = [1,1.5,2,3,3.5,5,6,8,10,12,15,20,25,30,40,50];
+
+  // Paste your deployed Google Apps Script Web App URL here to enable the
+  // "Request my quote" button. Leave blank to keep the tool working with submission disabled.
+  var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwGap5T_zub1F6xIOa1qc43EgLUt_huXCsA6-icYVBgQKXKW3x0EXhnAuBRwOvD-NP0_g/exec";
+
+  // Appliance library, transcribed from the appliance-selection screens supplied by the user.
+  var LIBRARY = [
+    { category: "Cooling", items: [
+      { name: "Air Conditioner (1.5HP)", watts: 1500 },
+      { name: "Air Conditioner (2HP)", watts: 2000 },
+      { name: "Air Conditioner (2.5HP)", watts: 2500 },
+      { name: "Standing Fan", watts: 75 },
+      { name: "Ceiling Fan", watts: 60 },
+      { name: "Table Fan", watts: 50 }
+    ]},
+    { category: "Kitchen", items: [
+      { name: "Refrigerator (Single Door)", watts: 150 },
+      { name: "Refrigerator (Double Door)", watts: 250 },
+      { name: "Deep Freezer (Small)", watts: 200 },
+      { name: "Deep Freezer (Large)", watts: 350 },
+      { name: "Microwave (800W)", watts: 800 },
+      { name: "Microwave (1000W)", watts: 1000 },
+      { name: "Electric Kettle", watts: 1500 },
+      { name: "Blender", watts: 400 },
+      { name: "Electric Stove (Single)", watts: 1500 },
+      { name: "Electric Stove (Double)", watts: 3000 }
+    ]},
+    { category: "Laundry", items: [
+      { name: "Washing Machine", watts: 500 },
+      { name: "Iron (Regular)", watts: 1000 },
+      { name: "Iron (Steam)", watts: 1400 }
+    ]},
+    { category: "Heating", items: [
+      { name: "Water Heater (Small)", watts: 1500 },
+      { name: "Water Heater (Large)", watts: 3000 }
+    ]},
+    { category: "Entertainment", items: [
+      { name: "LED TV (32\")", watts: 50 },
+      { name: "LED TV (43\")", watts: 80 },
+      { name: "LED TV (55\")", watts: 120 },
+      { name: "Plasma TV (42\")", watts: 200 },
+      { name: "Plasma TV (50\")", watts: 300 },
+      { name: "Home Theater System", watts: 200 },
+      { name: "Sound System", watts: 150 },
+      { name: "Cable/Satellite Decoder", watts: 25 },
+      { name: "Gaming Console (PlayStation/Xbox)", watts: 150 }
+    ]},
+    { category: "Lighting", items: [
+      { name: "LED Bulb (7W)", watts: 7 },
+      { name: "LED Bulb (10W)", watts: 10 },
+      { name: "LED Bulb (15W)", watts: 15 },
+      { name: "Incandescent Bulb (60W)", watts: 60 },
+      { name: "Incandescent Bulb (100W)", watts: 100 },
+      { name: "Fluorescent Tube", watts: 40 }
+    ]},
+    { category: "Office", items: [
+      { name: "Desktop Computer", watts: 200 },
+      { name: "Laptop", watts: 60 },
+      { name: "Monitor (LED)", watts: 40 },
+      { name: "Printer (Inkjet)", watts: 50 },
+      { name: "Printer (Laser)", watts: 400 },
+      { name: "Photocopier", watts: 1500 },
+      { name: "WiFi Router", watts: 10 }
+    ]},
+    { category: "Other", items: [
+      { name: "Vacuum Cleaner", watts: 1000 },
+      { name: "Hair Dryer", watts: 1200 },
+      { name: "Water Pump (0.5HP)", watts: 370 },
+      { name: "Water Pump (1HP)", watts: 750 },
+      { name: "Phone Charger", watts: 10 }
+    ]}
+  ];
+
+  var idCounter = 1;
+  function nextId(){ return idCounter++; }
+
+  // Ready-made appliance sets so someone can start from a realistic
+  // baseline instead of an empty list, then edit from there.
+  var PROFILES = [
+    { name: "2-Bedroom Flat", items: [
+      { name: "LED Bulb (10W)", watts: 10, qty: 8, hours: 6 },
+      { name: "Ceiling Fan", watts: 60, qty: 3, hours: 8 },
+      { name: "Refrigerator (Single Door)", watts: 150, qty: 1, hours: 24 },
+      { name: "LED TV (43\")", watts: 80, qty: 1, hours: 5 },
+      { name: "WiFi Router", watts: 10, qty: 1, hours: 24 },
+      { name: "Iron (Regular)", watts: 1000, qty: 1, hours: 0.5 },
+      { name: "Phone Charger", watts: 10, qty: 2, hours: 3 }
+    ]},
+    { name: "3-Bedroom Flat + 2 ACs", items: [
+      { name: "LED Bulb (10W)", watts: 10, qty: 12, hours: 6 },
+      { name: "Ceiling Fan", watts: 60, qty: 4, hours: 8 },
+      { name: "Air Conditioner (1.5HP)", watts: 1500, qty: 2, hours: 6 },
+      { name: "Refrigerator (Double Door)", watts: 250, qty: 1, hours: 24 },
+      { name: "LED TV (55\")", watts: 120, qty: 1, hours: 5 },
+      { name: "Washing Machine", watts: 500, qty: 1, hours: 1 },
+      { name: "WiFi Router", watts: 10, qty: 1, hours: 24 },
+      { name: "Microwave (1000W)", watts: 1000, qty: 1, hours: 0.5 }
+    ]},
+    { name: "Small Shop", items: [
+      { name: "LED Bulb (10W)", watts: 10, qty: 6, hours: 10 },
+      { name: "Standing Fan", watts: 75, qty: 2, hours: 10 },
+      { name: "Refrigerator (Single Door)", watts: 150, qty: 1, hours: 24 },
+      { name: "Deep Freezer (Small)", watts: 200, qty: 1, hours: 24 },
+      { name: "Sound System", watts: 150, qty: 1, hours: 6 },
+      { name: "Phone Charger", watts: 10, qty: 3, hours: 4 }
+    ]},
+    { name: "Barbing Salon", items: [
+      { name: "LED Bulb (10W)", watts: 10, qty: 8, hours: 10 },
+      { name: "Standing Fan", watts: 75, qty: 2, hours: 10 },
+      { name: "LED TV (32\")", watts: 50, qty: 1, hours: 8 },
+      { name: "Sound System", watts: 150, qty: 1, hours: 8 },
+      { name: "Hair Dryer", watts: 1200, qty: 1, hours: 2 },
+      { name: "Phone Charger", watts: 10, qty: 2, hours: 6 }
+    ]}
+  ];
+
+  var appliances = [];
+
+  var state = {
+    sunHours: 5.5,
+    lossFactor: 1.3,
+    autonomyDays: 1,
+    batteryType: 'lithium',
+    batteryVoltage: 48,
+    panelWattage: 550,
+    diversityFactor: 0.7,
+    surgeFactor: 1.25,
+    inverterGrowth: 1.15
+  };
+
+  // Typical electrical characteristics used to predict panel wiring, scaled
+  // to whatever panel wattage is entered. Documented in the methodology panel.
+  var TYPICAL_PANEL_VMP = 41.4;
+  var TYPICAL_PANEL_VOC = 49.5;
+  var SAFE_MAX_STRING_VOLTAGE = 500; // conservative ceiling for common hybrid inverters
+
+  var activeCategory = LIBRARY[0].category;
+  var lastCalc = null;
+  var clientInfo = { clientName: "", clientPhone: "", clientEmail: "", siteAddress: "" };
+
+  // Recommended-system overrides. "dirty" means the person has typed a value
+  // manually; while clean, the field tracks the calculated baseline live.
+  var overrides = {
+    array: { dirty: false, value: 0 },
+    bank: { dirty: false, value: 0 },
+    inverter: { dirty: false, value: 0 }
+  };
+
+  function fmt(n, dp){
+    if (dp === undefined) dp = 2;
+    if (!isFinite(n)) return '0';
+    return n.toLocaleString('en-GB', { maximumFractionDigits: dp, minimumFractionDigits: 0 });
+  }
+
+  function roundUpToStandard(value, table){
+    for (var i=0;i<table.length;i++){ if (value <= table[i]) return table[i]; }
+    return Math.ceil(value/5)*5;
+  }
+
+  function dod(){ return state.batteryType === 'lithium' ? 0.9 : 0.5; }
+
+  function showToast(msg){
+    var t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(t._timer);
+    t._timer = setTimeout(function(){ t.classList.remove('show'); }, 1600);
+  }
+
+  function renderProfileRow(){
+    var el = document.getElementById('profileRow');
+    el.innerHTML = '';
+    PROFILES.forEach(function(p){
+      var chip = document.createElement('button');
+      chip.type = 'button';
+      chip.className = 'profile-chip';
+      chip.textContent = p.name;
+      chip.onclick = function(){
+        appliances = p.items.map(function(it){
+          return { id: nextId(), name: it.name, watts: it.watts, qty: it.qty, hours: it.hours };
+        });
+        renderAll();
+        showToast('Loaded ' + p.name + ' \u2014 edit anything below');
+      };
+      el.appendChild(chip);
+    });
+  }
+
+  function renderLibTabs(){
+    var el = document.getElementById('libTabs');
+    el.innerHTML = '';
+    var searching = document.getElementById('applianceSearch').value.trim().length > 0;
+    el.style.display = searching ? 'none' : 'flex';
+    LIBRARY.forEach(function(cat){
+      var b = document.createElement('button');
+      b.className = 'lib-tab' + (cat.category === activeCategory ? ' active' : '');
+      b.textContent = cat.category;
+      b.onclick = function(){ activeCategory = cat.category; renderLibTabs(); renderLibGrid(); };
+      el.appendChild(b);
+    });
+  }
+
+  function addApplianceItem(it){
+    appliances.push({ id: nextId(), name: it.name, watts: it.watts, qty: 1, hours: 4 });
+    renderAll();
+    showToast('Added ' + it.name);
+  }
+
+  function renderLibGrid(){
+    var grid = document.getElementById('libGrid');
+    grid.innerHTML = '';
+    var query = document.getElementById('applianceSearch').value.trim().toLowerCase();
+    var items;
+    if (query) {
+      items = [];
+      LIBRARY.forEach(function(cat){
+        cat.items.forEach(function(it){
+          if (it.name.toLowerCase().indexOf(query) !== -1) items.push(it);
+        });
+      });
+    } else {
+      var cat = LIBRARY.filter(function(c){ return c.category === activeCategory; })[0];
+      items = cat ? cat.items : [];
+    }
+    if (query && !items.length) {
+      var none = document.createElement('div');
+      none.className = 'no-match';
+      none.textContent = 'No matches \u2014 try a different word, or add it as a custom item below.';
+      grid.appendChild(none);
+      return;
+    }
+    items.forEach(function(it){
+      var card = document.createElement('div');
+      card.className = 'lib-item';
+      card.innerHTML = '<div><div class="name">'+it.name+'</div><div class="watts">'+it.watts+'W</div></div><div class="plus">+</div>';
+      card.onclick = function(){ addApplianceItem(it); };
+      grid.appendChild(card);
+    });
+  }
+
+  function renderTable(){
+    var body = document.getElementById('applianceBody');
+    body.innerHTML = '';
+    appliances.forEach(function(a){
+      var dailyWh = a.watts * a.qty * a.hours;
+      var tr = document.createElement('tr');
+
+      var tdName = document.createElement('td');
+      var inName = document.createElement('input');
+      inName.className = 'cell-input';
+      inName.placeholder = 'Appliance name';
+      inName.value = a.name;
+      inName.oninput = function(){ a.name = this.value; };
+      tdName.appendChild(inName);
+
+      var tdWatts = document.createElement('td');
+      var inWatts = document.createElement('input');
+      inWatts.type = 'number'; inWatts.className = 'cell-input num'; inWatts.placeholder = 'e.g. 100';
+      if (a.watts) inWatts.value = a.watts;
+      inWatts.oninput = function(){ a.watts = parseFloat(this.value) || 0; updateRowTotal(); renderCalc(); };
+      tdWatts.appendChild(inWatts);
+
+      var tdQty = document.createElement('td');
+      var inQty = document.createElement('input');
+      inQty.type = 'number'; inQty.className = 'cell-input num'; inQty.placeholder = 'e.g. 1';
+      if (a.qty) inQty.value = a.qty;
+      inQty.oninput = function(){ a.qty = parseFloat(this.value) || 0; updateRowTotal(); renderCalc(); };
+      tdQty.appendChild(inQty);
+
+      var tdHours = document.createElement('td');
+      var inHours = document.createElement('input');
+      inHours.type = 'number'; inHours.className = 'cell-input num'; inHours.placeholder = 'e.g. 4';
+      if (a.hours) inHours.value = a.hours;
+      inHours.oninput = function(){ a.hours = parseFloat(this.value) || 0; updateRowTotal(); renderCalc(); };
+      tdHours.appendChild(inHours);
+
+      var tdTotal = document.createElement('td');
+      tdTotal.className = 'num row-total';
+      tdTotal.textContent = fmt(dailyWh, 0);
+
+      function updateRowTotal(){
+        tdTotal.textContent = fmt(a.watts * a.qty * a.hours, 0);
+      }
+
+      var tdDel = document.createElement('td');
+      var delBtn = document.createElement('button');
+      delBtn.className = 'del-btn';
+      delBtn.innerHTML = '&#10005;';
+      delBtn.title = 'Remove';
+      delBtn.onclick = function(){
+        appliances = appliances.filter(function(x){ return x.id !== a.id; });
+        renderAll();
+      };
+      tdDel.appendChild(delBtn);
+
+      tr.appendChild(tdName); tr.appendChild(tdWatts); tr.appendChild(tdQty);
+      tr.appendChild(tdHours); tr.appendChild(tdTotal); tr.appendChild(tdDel);
+      body.appendChild(tr);
+    });
+    document.getElementById('itemCount').textContent = appliances.length ? (appliances.length + ' item' + (appliances.length===1?'':'s')) : '';
+    document.getElementById('emptyHint').style.display = appliances.length ? 'none' : 'block';
+  }
+
+  function renderChart(rows, maxWh){
+    var wrap = document.getElementById('chartBody');
+    wrap.innerHTML = '';
+    var sorted = rows.slice().sort(function(a,b){ return b.dailyWh - a.dailyWh; }).slice(0,8);
+    sorted.forEach(function(r){
+      var row = document.createElement('div');
+      row.className = 'bar-row';
+
+      var name = document.createElement('div');
+      name.className = 'bar-name'; name.textContent = r.name; name.title = r.name;
+
+      var track = document.createElement('div');
+      track.className = 'bar-track';
+      var fill = document.createElement('div');
+      fill.className = 'bar-fill';
+      var pct = maxWh > 0 ? Math.max(2, (r.dailyWh/maxWh)*100) : 0;
+      fill.style.width = pct + '%';
+      track.appendChild(fill);
+
+      var val = document.createElement('div');
+      val.className = 'bar-val'; val.textContent = fmt(r.dailyWh,0);
+
+      row.appendChild(name); row.appendChild(track); row.appendChild(val);
+      wrap.appendChild(row);
+    });
+    document.getElementById('chartWrap').style.display = sorted.length ? 'block' : 'none';
+  }
+
+  function syncFinalInput(inputId, overrideObj, baseline, deltaId){
+    var input = document.getElementById(inputId);
+    if (document.activeElement !== input) {
+      input.value = fmt(overrideObj.value, 2);
+    }
+    var deltaEl = document.getElementById(deltaId);
+    var diff = baseline > 0 ? ((overrideObj.value - baseline)/baseline)*100 : 0;
+    if (!overrideObj.dirty || Math.abs(diff) < 0.5) {
+      deltaEl.textContent = 'Matches calculated recommendation';
+      deltaEl.className = 'rec-delta same';
+    } else if (diff > 0) {
+      deltaEl.textContent = '+' + fmt(diff,0) + '% above calculated \u2014 bigger system';
+      deltaEl.className = 'rec-delta up';
+    } else {
+      deltaEl.textContent = fmt(diff,0) + '% below calculated \u2014 check this still covers your load';
+      deltaEl.className = 'rec-delta down';
+    }
+  }
+
+  function renderCalc(){
+    var rows = appliances.map(function(a){
+      return { name: a.name, dailyWh: a.watts*a.qty*a.hours, peakW: a.watts*a.qty };
+    });
+    var totalDailyWh = rows.reduce(function(s,r){ return s+r.dailyWh; }, 0);
+    var totalDailyKWh = totalDailyWh/1000;
+    var rawPeakW = rows.reduce(function(s,r){ return s+r.peakW; }, 0);
+    // Diversified peak: a realistic long-run average of what's actually running together.
+    var diversifiedPeakW = rawPeakW * state.diversityFactor;
+    // Inverter sizing uses a higher floor so a low diversity figure never
+    // undersizes the inverter itself — diversity is a fair assumption for
+    // average energy use, but riskier applied directly to equipment sizing.
+    var diversityForInverter = Math.max(state.diversityFactor, 0.8);
+    var coincidentPeakW = rawPeakW * diversityForInverter;
+
+    var arrayKWp = state.sunHours > 0 ? (totalDailyKWh*state.lossFactor)/state.sunHours : 0;
+    var panelCount = state.panelWattage > 0 ? Math.ceil((arrayKWp*1000)/state.panelWattage) : 0;
+
+    var usableBatteryKWh = totalDailyKWh*state.autonomyDays;
+    var bankKWh = dod() > 0 ? usableBatteryKWh/dod() : 0;
+    var bankAh = state.batteryVoltage > 0 ? (bankKWh*1000)/state.batteryVoltage : 0;
+
+    var growthFactor = state.inverterGrowth || 1;
+    var inverterRawKVA = (coincidentPeakW*state.surgeFactor*growthFactor)/1000;
+    var inverterKVA = roundUpToStandard(inverterRawKVA, STANDARD_INVERTER_SIZES);
+
+    document.getElementById('totalDemand').textContent = fmt(totalDailyKWh,2) + ' kWh';
+    document.getElementById('totalPeak').textContent = fmt(rawPeakW,0) + ' W';
+
+    document.getElementById('arrayKWp').textContent = fmt(arrayKWp,2);
+    document.getElementById('arrayNote').textContent = '(\u2248 ' + panelCount + ' \u00d7 ' + (state.panelWattage||0) + 'Wp panels)';
+
+    document.getElementById('bankKWh').textContent = fmt(bankKWh,2);
+    document.getElementById('bankNote').textContent = '(\u2248 ' + fmt(bankAh,0) + ' Ah at ' + state.batteryVoltage + 'V)';
+
+    document.getElementById('inverterKVA').textContent = inverterKVA;
+    var growthPct = Math.round((growthFactor-1)*100);
+    document.getElementById('inverterNote').textContent = '(sized for \u2248 ' + fmt(coincidentPeakW,0) + 'W running together, with surge and ~' + growthPct + '% future-growth headroom)';
+
+    document.getElementById('dailyDemandTile').textContent = fmt(totalDailyKWh,2);
+    document.getElementById('demandNote').textContent = '\u2014 ' + state.autonomyDays + ' day(s) autonomy \u2192 ' + fmt(usableBatteryKWh,2) + ' kWh usable';
+
+    document.getElementById('dodHint').textContent = 'Depth of discharge assumed: ' + (state.batteryType === 'lithium' ? '90% (lithium)' : '50% (lead-acid, to protect cycle life)') + '.';
+
+    // Sticky summary bar
+    document.getElementById('sumDemand').textContent = fmt(totalDailyKWh,2) + ' kWh';
+    document.getElementById('sumArray').textContent = fmt(overrides.array.value,2) + ' kWp';
+    document.getElementById('sumBattery').textContent = fmt(overrides.bank.value,2) + ' kWh';
+    document.getElementById('sumInverter').textContent = fmt(overrides.inverter.value,1) + ' kVA';
+
+    // Fuel savings
+    var fuelWeekly = parseFloat(document.getElementById('fuelSpendWeekly').value) || 0;
+    var savingsEl = document.getElementById('savingsResult');
+    if (fuelWeekly > 0) {
+      var monthly = fuelWeekly * 52/12;
+      var yearly = fuelWeekly * 52;
+      savingsEl.style.display = 'block';
+      savingsEl.innerHTML = 'That\u2019s roughly <b>\u20a6' + fmt(monthly,0) + '</b> a month, or <b>\u20a6' + fmt(yearly,0) + '</b> a year, currently going into fuel. A solar system removes this ongoing cost entirely.';
+    } else {
+      savingsEl.style.display = 'none';
+    }
+
+    // Recommended-system overrides: track baseline live until edited.
+    if (!overrides.array.dirty) overrides.array.value = arrayKWp;
+    if (!overrides.bank.dirty) overrides.bank.value = bankKWh;
+    if (!overrides.inverter.dirty) overrides.inverter.value = inverterKVA;
+    syncFinalInput('finalArrayKWp', overrides.array, arrayKWp, 'arrayDelta');
+    syncFinalInput('finalBankKWh', overrides.bank, bankKWh, 'bankDelta');
+    syncFinalInput('finalInverterKVA', overrides.inverter, inverterKVA, 'inverterDelta');
+
+    // Predicted PV panel wiring, based on the recommended (possibly upgraded)
+    // array size, using typical electrical characteristics for the wattage entered.
+    var finalPanelCount = state.panelWattage > 0 ? Math.ceil((overrides.array.value*1000)/state.panelWattage) : 0;
+    var predictedVmp = TYPICAL_PANEL_VMP;
+    var predictedVoc = TYPICAL_PANEL_VOC;
+    var predictedImp = state.panelWattage > 0 ? state.panelWattage/predictedVmp : 0;
+    var predictedIsc = predictedImp * 1.05;
+    var seriesCount = Math.max(1, Math.min(finalPanelCount || 1, Math.floor(SAFE_MAX_STRING_VOLTAGE/predictedVoc) || 1));
+    var stringsCount = seriesCount > 0 ? Math.ceil(finalPanelCount / seriesCount) : 0;
+    var installedPanels = stringsCount * seriesCount;
+    var stringVmp = predictedVmp * seriesCount;
+    var stringVoc = predictedVoc * seriesCount;
+    var arrayImpTotal = predictedImp * stringsCount;
+    var arrayIscTotal = predictedIsc * stringsCount;
+
+    document.getElementById('installedPanels').textContent = installedPanels + ' \u00d7 ' + (state.panelWattage||0) + 'Wp';
+    document.getElementById('stringsCount').textContent = stringsCount + ' string' + (stringsCount===1?'':'s') + ' of ' + seriesCount + ' panel' + (seriesCount===1?'':'s');
+    document.getElementById('stringVmp').textContent = fmt(stringVmp,1) + ' V';
+    document.getElementById('arrayImp').textContent = fmt(arrayImpTotal,1) + ' A';
+
+    // Toggle empty-state vs. recommendation content.
+    var hasAppliances = appliances.length > 0;
+    document.getElementById('emptyRec').style.display = hasAppliances ? 'none' : 'block';
+    document.getElementById('recContent').style.display = hasAppliances ? 'block' : 'none';
+
+    lastCalc = {
+      rows: rows,
+      totalDailyKWh: totalDailyKWh,
+      rawPeakW: rawPeakW,
+      diversifiedPeakW: diversifiedPeakW,
+      coincidentPeakW: coincidentPeakW,
+      arrayKWp: arrayKWp,
+      panelCount: panelCount,
+      usableBatteryKWh: usableBatteryKWh,
+      bankKWh: bankKWh,
+      bankAh: bankAh,
+      inverterKVA: inverterKVA,
+      predictedVmp: predictedVmp,
+      predictedVoc: predictedVoc,
+      predictedImp: predictedImp,
+      predictedIsc: predictedIsc,
+      seriesCount: seriesCount,
+      stringsCount: stringsCount,
+      installedPanels: installedPanels,
+      stringVmp: stringVmp,
+      stringVoc: stringVoc,
+      arrayImpTotal: arrayImpTotal,
+      arrayIscTotal: arrayIscTotal
+    };
+
+    var maxWh = rows.reduce(function(m,r){ return Math.max(m, r.dailyWh); }, 0);
+    renderChart(rows, maxWh);
+  }
+
+  function renderAll(){
+    renderTable();
+    renderCalc();
+  }
+
+  function bindInput(id, key){
+    var el = document.getElementById(id);
+    if (state[key]) { el.value = state[key]; } // leave blank (placeholder shows) when the default is 0
+    el.oninput = function(){
+      var v = parseFloat(this.value);
+      state[key] = isNaN(v) ? 0 : v;
+      renderCalc();
+    };
+  }
+
+  function bindSeg(containerId, key, cast){
+    var container = document.getElementById(containerId);
+    var buttons = container.querySelectorAll('button');
+    function refresh(){
+      buttons.forEach(function(b){
+        b.className = (String(state[key]) === b.getAttribute('data-val')) ? 'active' : '';
+      });
+    }
+    buttons.forEach(function(b){
+      b.onclick = function(){
+        var v = b.getAttribute('data-val');
+        state[key] = cast ? cast(v) : v;
+        refresh();
+        renderCalc();
+      };
+    });
+    refresh();
+  }
+
+  function bindFinalInput(inputId, overrideObj){
+    document.getElementById(inputId).oninput = function(){
+      overrideObj.dirty = true;
+      overrideObj.value = parseFloat(this.value) || 0;
+      renderCalc();
+    };
+  }
+
+  document.getElementById('addBlankRow').onclick = function(){
+    appliances.push({ id: nextId(), name: '', watts: 0, qty: 0, hours: 0 });
+    renderAll();
+  };
+
+  document.getElementById('clearList').onclick = function(){
+    if (!appliances.length) return;
+    if (window.confirm('Clear all items from your list? This can\u2019t be undone.')) {
+      appliances = [];
+      renderAll();
+    }
+  };
+
+  document.getElementById('methodToggle').onclick = function(){
+    var body = document.getElementById('methodBody');
+    var chevron = document.getElementById('methodChevron');
+    var open = body.classList.toggle('open');
+    chevron.textContent = open ? '\u25B4' : '\u25BE';
+  };
+
+  document.getElementById('advancedToggle').onclick = function(){
+    var body = document.getElementById('advancedBody');
+    var chevron = document.getElementById('advancedChevron');
+    var open = body.classList.toggle('open');
+    chevron.innerHTML = open ? '&#9652;' : '&#9662;';
+  };
+
+  function bindTextInput(id, key){
+    var el = document.getElementById(id);
+    el.oninput = function(){ clientInfo[key] = this.value; };
+  }
+
+  function buildPayload(){
+    if (!lastCalc) return null;
+    var finalBankAh = state.batteryVoltage > 0 ? (overrides.bank.value*1000)/state.batteryVoltage : 0;
+    var finalPanelCount = state.panelWattage > 0 ? Math.ceil((overrides.array.value*1000)/state.panelWattage) : 0;
+    return {
+      submittedAt: new Date().toISOString(),
+      client: clientInfo,
+      appliances: appliances.map(function(a){
+        return { name: a.name, watts: a.watts, qty: a.qty, hours: a.hours, dailyWh: Math.round(a.watts*a.qty*a.hours) };
+      }),
+      totals: {
+        dailyKWh: lastCalc.totalDailyKWh,
+        connectedLoadW: lastCalc.rawPeakW,
+        diversifiedPeakW: lastCalc.diversifiedPeakW,
+        coincidentPeakW: lastCalc.coincidentPeakW,
+        fuelSpendWeekly: parseFloat(document.getElementById('fuelSpendWeekly').value) || 0
+      },
+      designInputs: {
+        sunHours: state.sunHours,
+        lossFactor: state.lossFactor,
+        autonomyDays: state.autonomyDays,
+        batteryType: state.batteryType,
+        batteryVoltage: state.batteryVoltage,
+        panelWattage: state.panelWattage,
+        diversityFactor: state.diversityFactor,
+        surgeFactor: state.surgeFactor,
+        inverterGrowth: state.inverterGrowth,
+        predictedPanelVmp: lastCalc.predictedVmp,
+        predictedPanelVoc: lastCalc.predictedVoc,
+        predictedPanelImp: lastCalc.predictedImp,
+        predictedPanelIsc: lastCalc.predictedIsc,
+        predictedPanelsPerString: lastCalc.seriesCount
+      },
+      results: {
+        arrayKWp: lastCalc.arrayKWp,
+        panelCount: lastCalc.panelCount,
+        bankKWh: lastCalc.bankKWh,
+        bankAh: lastCalc.bankAh,
+        inverterKVA: lastCalc.inverterKVA,
+        stringsCount: lastCalc.stringsCount,
+        installedPanels: lastCalc.installedPanels,
+        stringVmp: lastCalc.stringVmp,
+        stringVoc: lastCalc.stringVoc,
+        arrayImpTotal: lastCalc.arrayImpTotal,
+        arrayIscTotal: lastCalc.arrayIscTotal
+      },
+      recommended: {
+        arrayKWpFinal: overrides.array.value,
+        panelCountFinal: finalPanelCount,
+        bankKWhFinal: overrides.bank.value,
+        bankAhFinal: finalBankAh,
+        inverterKVAFinal: overrides.inverter.value
+      }
+    };
+  }
+
+  document.getElementById('submitBtn').onclick = function(){
+    var statusEl = document.getElementById('submitStatus');
+    if (!SCRIPT_URL) {
+      statusEl.textContent = 'Submission isn\u2019t connected yet \u2014 ask whoever manages this file to add the tracking sheet URL.';
+      statusEl.style.color = '#C97A22';
+      return;
+    }
+    var payload = buildPayload();
+    if (!payload || !appliances.length) {
+      statusEl.textContent = 'Add at least one item in step 2 before requesting your quote.';
+      statusEl.style.color = '#C97A22';
+      return;
+    }
+    var btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = 'Sending\u2026';
+    statusEl.style.color = '#5B6B85';
+    statusEl.textContent = '';
+
+    fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: JSON.stringify(payload)
+    }).then(function(){
+      statusEl.textContent = 'Sent! A FixPower representative will be in touch shortly.';
+      statusEl.style.color = '#0BB21C';
+      btn.textContent = 'Request my quote';
+      btn.disabled = false;
+    }).catch(function(){
+      statusEl.textContent = 'Couldn\u2019t send \u2014 check your internet connection and try again.';
+      statusEl.style.color = '#c0392b';
+      btn.textContent = 'Request my quote';
+      btn.disabled = false;
+    });
+  };
+
+  renderProfileRow();
+  renderLibTabs();
+  renderLibGrid();
+  document.getElementById('applianceSearch').oninput = function(){ renderLibTabs(); renderLibGrid(); };
+  document.getElementById('fuelSpendWeekly').oninput = function(){ renderCalc(); };
+  document.getElementById('printBtn').onclick = function(){ window.print(); };
+  bindInput('sunHours', 'sunHours');
+  bindInput('lossFactor', 'lossFactor');
+  bindInput('autonomyDays', 'autonomyDays');
+  bindInput('panelWattage', 'panelWattage');
+  bindInput('diversityFactor', 'diversityFactor');
+  bindInput('surgeFactor', 'surgeFactor');
+  bindInput('inverterGrowth', 'inverterGrowth');
+  bindSeg('batteryTypeSeg', 'batteryType');
+  bindSeg('batteryVoltSeg', 'batteryVoltage', function(v){ return parseInt(v,10); });
+  bindTextInput('clientName', 'clientName');
+  bindTextInput('clientPhone', 'clientPhone');
+  bindTextInput('clientEmail', 'clientEmail');
+  bindTextInput('siteAddress', 'siteAddress');
+  bindFinalInput('finalArrayKWp', overrides.array);
+  bindFinalInput('finalBankKWh', overrides.bank);
+  bindFinalInput('finalInverterKVA', overrides.inverter);
+  document.getElementById('resetArray').onclick = function(){ overrides.array.dirty = false; renderCalc(); };
+  document.getElementById('resetBank').onclick = function(){ overrides.bank.dirty = false; renderCalc(); };
+  document.getElementById('resetInverter').onclick = function(){ overrides.inverter.dirty = false; renderCalc(); };
+
+  renderAll();
+})();
+</script>
+
+</body>
+</html>
